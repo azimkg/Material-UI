@@ -14,7 +14,7 @@ const Header = () => {
         <Link to="/">
           <img
             width="200px"
-            src="https://content.thewosgroup.com/wosus/logo/wos_since_1924_uk_blk_notag.svg"
+            src="https://thumbs.dreamstime.com/z/alaskan-malamute-dog-happy-face-paw-puppy-pup-pet-clip-art-k-cop-police-logo-svg-png-clipart-vector-cricut-cut-set-cutting-201981611.jpg"
             alt=""
           />
         </Link>

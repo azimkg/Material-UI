@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgb(112, 110, 110);
+  border-bottom: 1px solid rgb(112, 110, 110);
+}
+.navbar-item {
+  margin: 5px 15px;
+  color: black;
+}
+
+.navbar-item-active {
+  margin: 5px 15px;
+  color: black;
+  border-bottom: 1px solid grey;
+}
