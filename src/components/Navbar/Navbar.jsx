@@ -36,15 +36,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       {NAV_ITEMS.map((item) => (
-        <Link
-          className={
-            location.pathname === item.link
-              ? "navbar-item-active"
-              : "navbar-item"
-          }
-          key={item.id}
-          to={item.link}
-        >
+        <Link className="navbar-item" key={item.id} to={item.link}>
           {item.title}
         </Link>
       ))}
