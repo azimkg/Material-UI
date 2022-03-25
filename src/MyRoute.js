@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AddProduct from "./components/AddProduct/AddProduct";
 import Header from "./components/Header/Header";
 
 const MyRoute = () => {
@@ -7,7 +8,7 @@ const MyRoute = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" />
+        <Route path="/add" element={<AddProduct />} />
       </Routes>
     </BrowserRouter>
   );

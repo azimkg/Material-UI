@@ -1,0 +1,39 @@
+.AddProduct {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inp {
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn {
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+  background-color: green;
+  border: none;
+}
+
+.btn:hover {
+  background-color: greenyellow;
+  box-shadow: 2px 2px 2px;
+}

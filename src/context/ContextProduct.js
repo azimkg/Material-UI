@@ -5,7 +5,7 @@ const API = "http://localhost:8000/products";
 export const contextProduct = React.createContext();
 
 const INIT_STATE = {
-  products: {},
+  products: [],
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -28,9 +28,14 @@ const ContextProductProvider = ({ children }) => {
     });
   }
 
+  async function addAnimal(newAnimal) {
+    await axios.post(API, newAnimal);
+    getAllProduct();
+  }
+
   return (
     <contextProduct.Provider
-      value={{ products: state.products, getAllProduct }}
+      value={{ products: state.products, getAllProduct, addAnimal }}
     >
       {children}
     </contextProduct.Provider>
