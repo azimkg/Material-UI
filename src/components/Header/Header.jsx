@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AddProduct from "../AddProduct/AddProduct";
 
 import Navbar from "../Navbar/Navbar";
 
@@ -23,15 +24,17 @@ const Header = () => {
             alt=""
           />
         </div>
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png"
-          style={{
-            height: "50px",
-            width: "50px",
-            color: "black",
-            cursor: "pointer",
-          }}
-        />
+        <Link to="/add">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png"
+            style={{
+              height: "50px",
+              width: "50px",
+              color: "black",
+              cursor: "pointer",
+            }}
+          />
+        </Link>
       </div>
       <Navbar />
     </>
