@@ -1,46 +1,10 @@
 {
   "products": [
     {
-      "title": "bkhbashlbhjas",
-      "price": "asjhbasbl",
-      "image": "ajsygyuasg",
+      "title": "Лев",
+      "price": "12000$",
+      "image": "https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg",
       "id": 1
-    },
-    {
-      "title": "bkhbashlbhjas",
-      "price": "asjhbasbl",
-      "image": "ajsygyuasg",
-      "id": 2
-    },
-    {
-      "title": "",
-      "price": "",
-      "image": "",
-      "id": 3
-    },
-    {
-      "title": "",
-      "price": "",
-      "image": "",
-      "id": 4
-    },
-    {
-      "title": "",
-      "price": "",
-      "image": "",
-      "id": 5
-    },
-    {
-      "title": "",
-      "price": "",
-      "image": "",
-      "id": 6
-    },
-    {
-      "title": "",
-      "price": "",
-      "image": "",
-      "id": 7
     }
   ]
 }

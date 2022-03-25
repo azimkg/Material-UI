@@ -7,7 +7,6 @@ const App = () => {
   return (
     <ContextProductProvider>
       <MyRoute />
-      <MediaCard />
     </ContextProductProvider>
   );
 };

@@ -1,0 +1,10 @@
+/* .card {
+  background-image: url(https://funart.pro/uploads/posts/2021-04/1618025246_39-p-oboi-rastitelnii-i-zhivotnii-mir-47.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+} */
+.product {
+  display: flex;
+  justify-content: center;
+}
