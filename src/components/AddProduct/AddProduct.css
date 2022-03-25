@@ -1,27 +1,16 @@
-.AddProduct {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.add {
+.modal {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .inp {
-  width: 300px;
+  width: 400px;
   height: 30px;
   margin-top: 10px;
   border-radius: 10px;
   border: none;
+  background-color: aliceblue;
 }
 
 .btn {
@@ -29,11 +18,11 @@
   border-radius: 10px;
   width: 300px;
   height: 30px;
-  background-color: green;
+  background-color: rgb(211, 224, 211);
   border: none;
 }
 
 .btn:hover {
-  background-color: greenyellow;
+  background-color: grey;
   box-shadow: 2px 2px 2px;
 }

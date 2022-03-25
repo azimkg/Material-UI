@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import axios from "axios";
 
-const API = "http://localhost:8000/products";
+const API = " http://localhost:8001/products";
 export const contextProduct = React.createContext();
 
 const INIT_STATE = {
@@ -20,8 +20,8 @@ const reducer = (state = INIT_STATE, action) => {
 const ContextProductProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  function getAllProduct() {
-    let res = axios(API);
+  async function getAllProduct() {
+    let res = await axios(API);
     dispatch({
       type: "GET_PRODUCT",
       payload: res,
@@ -33,9 +33,19 @@ const ContextProductProvider = ({ children }) => {
     getAllProduct();
   }
 
+  async function deleteProduct(id) {
+    await axios.delete(`${API}/${id}`);
+    getAllProduct();
+  }
+
   return (
     <contextProduct.Provider
-      value={{ products: state.products, getAllProduct, addAnimal }}
+      value={{
+        products: state.products,
+        getAllProduct,
+        addAnimal,
+        deleteProduct,
+      }}
     >
       {children}
     </contextProduct.Provider>
