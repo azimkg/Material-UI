@@ -28,7 +28,7 @@ const AddProduct = () => {
 
   function handleAdd() {
     if (title === "" || price === "" || image === "") {
-      alert("Заполните вся поля!");
+      alert("Заполните все поля!");
       return;
     }
     let newAnimal = {
@@ -38,6 +38,10 @@ const AddProduct = () => {
     };
     addAnimal(newAnimal);
     handleClose();
+
+    setTitle("");
+    setPrice("");
+    setImage("");
   }
 
   return (

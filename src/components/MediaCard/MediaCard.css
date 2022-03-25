@@ -6,5 +6,35 @@
 } */
 .product {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.inp1 {
+  margin-top: 20px;
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.page {
+  margin: 20px auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.btn-pages {
+  margin-top: 20px;
+  cursor: pointer;
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.btn-pages:hover {
+  color: rgba(0, 0, 0, 1);
+  border: 1px solid rgba(0, 0, 0, 1);
+  background-color: white;
 }
