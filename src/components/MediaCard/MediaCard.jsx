@@ -9,6 +9,8 @@ import { contextProduct } from "../../context/ContextProduct";
 import "./MediaCard.css";
 import { useSearchParams } from "react-router-dom";
 import Section from "../Section/Section";
+// import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function MediaCard() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -16,7 +18,7 @@ function MediaCard() {
     searchParams.get("q") ? searchParams.get("q") : ""
   );
   const [page, setPage] = useState(1);
-  const { products, getAllProduct, deleteProduct, pages } =
+  const { products, getAllProduct, deleteProduct, pages, editProduct } =
     useContext(contextProduct);
 
   useEffect(() => {
@@ -69,7 +71,11 @@ function MediaCard() {
               <Button onClick={() => deleteProduct(item.id)} size="small">
                 Удалить
               </Button>
-              <Button size="small">Изменить</Button>
+              <Link to={"/edit"}>
+                <Button onClick={() => editProduct(item.id)} size="small">
+                  Изменить
+                </Button>
+              </Link>
             </CardActions>
           </Card>
         ))}

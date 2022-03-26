@@ -7,6 +7,7 @@ export const contextProduct = React.createContext();
 const INIT_STATE = {
   products: [],
   pages: 0,
+  editTask: null,
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -16,6 +17,11 @@ const reducer = (state = INIT_STATE, action) => {
         ...state,
         products: action.payload.data,
         pages: Math.ceil(action.payload.headers["x-total-count"] / 1),
+      };
+    case "EDIT_PRODUCT":
+      return {
+        ...state,
+        editTask: action.payload,
       };
     default:
       return state;
@@ -42,15 +48,30 @@ const ContextProductProvider = ({ children }) => {
     await axios.delete(`${API}/${id}`);
     getAllProduct();
   }
+  async function editAnimal(id) {
+    let { data } = await axios(`${API}/${id}`);
+    console.log(data);
+    dispatch({
+      type: "EDIT_PRODUCT",
+      payload: data,
+    });
+  }
+  async function getOneAnimal(id, editedAnimal) {
+    await axios.patch(`${API}/${id}`, editedAnimal);
+    getAllProduct();
+  }
 
   return (
     <contextProduct.Provider
       value={{
         products: state.products,
         pages: state.pages,
+        editTask: state.editTask,
         getAllProduct,
         addAnimal,
         deleteProduct,
+        editAnimal,
+        getOneAnimal,
       }}
     >
       {children}
