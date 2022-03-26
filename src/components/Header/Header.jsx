@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AddProduct from "../AddProduct/AddProduct";
-
 import Navbar from "../Navbar/Navbar";
+import loveDog from "../Icons/LoveDog.png";
 
 import "./Header.css";
 
@@ -10,19 +10,15 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <Link to="/">
-          <img
-            width="100px"
-            src="https://thumbs.dreamstime.com/z/alaskan-malamute-dog-happy-face-paw-puppy-pup-pet-clip-art-k-cop-police-logo-svg-png-clipart-vector-cricut-cut-set-cutting-201981611.jpg"
-            alt=""
-          />
-        </Link>
+        <img width="90px" height="90px" src={loveDog} alt="logo" />
         <div>
-          <img
-            width="300px"
-            src="https://vtlogo.com/wp-content/uploads/2021/02/retail-zoo-vector-logo.png"
-            alt=""
-          />
+          <Link to="/">
+            <img
+              width="350px"
+              src="https://petshop.kg/wp-content/uploads/2020/07/petshop-logo-png-1-e1594202708701.png"
+              alt=""
+            />
+          </Link>
         </div>
         <AddProduct />
       </div>

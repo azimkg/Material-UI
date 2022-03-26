@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { contextProduct } from "../../context/ContextProduct";
 import "./AddProduct.css";
+import addDog from "../Icons/Add.png";
 
 const AddProduct = () => {
   const [title, setTitle] = useState("");
@@ -48,10 +49,10 @@ const AddProduct = () => {
     <div>
       <Button onClick={handleOpen}>
         <img
-          src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png"
+          src={addDog}
           style={{
-            height: "50px",
-            width: "50px",
+            height: "80px",
+            width: "80px",
             color: "black",
             cursor: "pointer",
           }}
