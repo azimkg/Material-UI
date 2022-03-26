@@ -1,9 +1,11 @@
 body {
-  background-color: beige;
+  background-image: url(https://i.pinimg.com/originals/e3/42/0d/e3420d96c7b3ae359dc18699d52f9f22.jpg);
+  background-repeat: repeat;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
   width: 95%;
-  margin: 20px auto;
+  margin: 0px auto;
 }
