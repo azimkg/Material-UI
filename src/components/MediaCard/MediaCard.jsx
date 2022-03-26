@@ -1,4 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Box, Modal } from "@mui/material";
+
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -7,10 +9,25 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { contextProduct } from "../../context/ContextProduct";
 import "./MediaCard.css";
-import { useSearchParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import Section from "../Section/Section";
 
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+
 function MediaCard() {
+  const params = useParams();
+  const [edit, setEdit] = useState(null);
+  const [open, setOpen] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchValue, setSearchValue] = useState(
     searchParams.get("q") ? searchParams.get("q") : ""
@@ -18,6 +35,9 @@ function MediaCard() {
   const [page, setPage] = useState(1);
   const { products, getAllProduct, deleteProduct, pages } =
     useContext(contextProduct);
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   useEffect(() => {
     getAllProduct();
@@ -69,7 +89,9 @@ function MediaCard() {
               <Button onClick={() => deleteProduct(item.id)} size="small">
                 Удалить
               </Button>
-              <Button size="small">Изменить</Button>
+              <Link style={{ textDecoration: "none" }} to={`/edit/${item.id}`}>
+                <Button size="small">Изменить</Button>
+              </Link>
             </CardActions>
           </Card>
         ))}

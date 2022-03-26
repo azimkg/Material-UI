@@ -6,28 +6,28 @@ import "./Navbar.css";
 const Navbar = () => {
   const NAV_ITEMS = [
     {
-      title: "СОБАКИ ",
-      link: "*",
+      title: "ГЛАВНАЯ ",
+      link: "/",
       id: 1,
     },
     {
       title: "КОШКИ",
-      link: "*",
+      link: "https://www.purina.ru/cats/getting-a-new-cat/finding-the-right-cat-for-me/the-most-beautiful-cats",
       id: 2,
     },
     {
       title: "ПТИЦЫ",
-      link: "*",
+      link: "https://wwf.ru/interesting/gallery/redkie-vidy-zhivotnykh/birds/",
       id: 3,
     },
     {
       title: "РЫБКИ",
-      link: "*",
+      link: "/",
       id: 4,
     },
     {
       title: "ПИТАНИЕ",
-      link: "*",
+      link: "/",
       id: 5,
     },
   ];
