@@ -6,27 +6,27 @@ import "./Navbar.css";
 const Navbar = () => {
   const NAV_ITEMS = [
     {
-      title: "TEXT 1",
+      title: "СОБАКИ ",
       link: "*",
       id: 1,
     },
     {
-      title: "TEXT 2",
+      title: "КОШКИ",
       link: "*",
       id: 2,
     },
     {
-      title: "TEXT 3",
+      title: "ПТИЦЫ",
       link: "*",
       id: 3,
     },
     {
-      title: "TEXT 4",
+      title: "РЫБКИ",
       link: "*",
       id: 4,
     },
     {
-      title: "TEXT 5",
+      title: "ПИТАНИЕ",
       link: "*",
       id: 5,
     },
