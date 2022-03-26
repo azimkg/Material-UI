@@ -1,11 +1,12 @@
 import React, { useReducer } from "react";
 import axios from "axios";
 
-const API = " http://localhost:8001/products";
+const API = "http://localhost:8000/products";
 export const contextProduct = React.createContext();
 
 const INIT_STATE = {
   products: [],
+  editProduct: null,
   pages: 0,
 };
 
@@ -16,6 +17,11 @@ const reducer = (state = INIT_STATE, action) => {
         ...state,
         products: action.payload.data,
         pages: Math.ceil(action.payload.headers["x-total-count"] / 1),
+      };
+    case "GET_EDIT_PRODUCT":
+      return {
+        ...state,
+        editProduct: action.payload.data,
       };
     default:
       return state;
@@ -43,14 +49,30 @@ const ContextProductProvider = ({ children }) => {
     getAllProduct();
   }
 
+  async function getEditProduct(id) {
+    let res = await axios(`${API}/${id}`);
+    dispatch({
+      type: "GET_EDIT_PRODUCT",
+      payload: res,
+    });
+  }
+
+  const editedProduct = async (id, edited) => {
+    await axios.patch(`${API}/${id}`, edited);
+    getAllProduct();
+  };
+
   return (
     <contextProduct.Provider
       value={{
         products: state.products,
+        editProduct: state.editProduct,
         pages: state.pages,
         getAllProduct,
         addAnimal,
         deleteProduct,
+        getEditProduct,
+        editedProduct,
       }}
     >
       {children}
