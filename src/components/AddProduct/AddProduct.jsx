@@ -38,7 +38,7 @@ const AddProduct = () => {
     };
     addAnimal(newAnimal);
     handleClose();
-
+    alert("Питомец успешно добавлен!");
     setTitle("");
     setPrice("");
     setImage("");
